@@ -1,0 +1,11 @@
+{
+  "name": "url-shortner-api",
+  "version": "1.0.0",
+  "description": "This project contains server apis",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Visura Malwara Arachchi",
+  "license": "ISC"
+}
