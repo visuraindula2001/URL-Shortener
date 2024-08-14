@@ -4,8 +4,9 @@
   "description": "This project contains server apis",
   "main": "server.js",
   "scripts": {
-    "build":"npx tsc",
+    "build": "npx tsc",
     "start": "npx tsc && node ./dist/server.js",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Visura Malwara Arachchi",
@@ -23,6 +24,7 @@
     "@types/mongoose": "^5.11.97",
     "@types/node": "^22.3.0",
     "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
 }
