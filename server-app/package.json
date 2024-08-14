@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build":"npx tsc",
-    "start": "node server.js",
+    "start": "npx tsc && node ./dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Visura Malwara Arachchi",
