@@ -1,4 +1,6 @@
 import express from "express";
+import { createUrl, deleteUrl, getAllUrl, getUrl } from "../controllers/shortUrl";
+
 
 const router = express.Router();
 
