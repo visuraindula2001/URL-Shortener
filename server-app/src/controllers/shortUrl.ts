@@ -58,5 +58,12 @@ export const deleteUrl = async (
   req: express.Request,
   res: express.Response
 ) => {
-
+  try {
+    const shortUrl = await urlModel.findByIdAndDelete({ _id:req.params.id});
+    if(shortUrl){
+      res.status(204).send({message : "Requested Url succesfully deleted"});
+    }
+   } catch (error) {
+    res.status(500).send({ message: "Something went wrong" });
+   }
 };
