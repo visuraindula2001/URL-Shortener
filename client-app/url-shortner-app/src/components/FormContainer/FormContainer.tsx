@@ -1,18 +1,23 @@
 import * as React from "react";
+import axios from "axios";
+import { serverUrl } from "../../helpers/Constants";
 
 interface IFormContainerProps {}
 
 const FormContainer: React.FunctionComponent<IFormContainerProps> = () => {
- const [fullUrl, setFullUrl] = React.useState<string>("");
- const handleSubmit = async(e:React.FormEvent<HTMLFormElement>) =>{
+  const [fullUrl, setFullUrl] = React.useState<string>("");
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-        
+      await axios.post(`${serverUrl}/shorturl`, {
+        fullUrl: fullUrl,
+      });
+      setFullUrl("");
     } catch (error) {
-        
+      console.log(error);
     }
- }
-    return (
+  };
+  return (
     <div className="container mx-auto p-2">
       <div className="bg-banner my-8 rounded-xl bg-cover bg-center">
         <div className="w-full h-full rounded-xl p-20 backdrop-brightness-50">
@@ -36,8 +41,9 @@ const FormContainer: React.FunctionComponent<IFormContainerProps> = () => {
                   required
                   className="block w-full p-4 ps-32 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
                   value={fullUrl}
-                  onChange={(e:React.ChangeEvent<HTMLInputElement>) => setFullUrl(e.target.value)}
-                 
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    setFullUrl(e.target.value)
+                  }
                 />
                 <button
                   type="submit"
