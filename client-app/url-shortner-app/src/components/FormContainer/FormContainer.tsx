@@ -27,7 +27,12 @@ const FormContainer: React.FunctionComponent<IFormContainerProps> = () => {
                   required
                   className="block w-full p-4 ps-32 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500"
                 />
-                
+                <button
+                  type="submit"
+                  className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-blue-700 rounded-lg border-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 "
+                >
+                  Shorten URL
+                </button>
               </div>
             </div>
           </form>
