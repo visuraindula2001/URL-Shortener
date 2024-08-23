@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { serverUrl } from "../../helpers/Constants";
 import axios from "axios";
 
+//************* DATA TABLE *******************//
+
 interface IDataTableProps {
   data: UrlData[];
   updateReoladState: () => void;
